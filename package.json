@@ -1,0 +1,34 @@
+{
+  "name": "quake-champions-api",
+  "version": "1.0.0",
+  "description": "Unofficial Quake Champions API client",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "quake",
+    "champions",
+    "api",
+    "client"
+  ],
+  "author": "lovethebomb",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-unfetch": "^2.0.0"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js?)$",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "node"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/*"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^23.1.0"
+  }
+}
