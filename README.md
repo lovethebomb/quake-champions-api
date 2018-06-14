@@ -31,6 +31,11 @@ async function getData() {
 }
 ```
 
+## Documentation
+
+- [Player](#player)
+- [Match](#match)
+
 ### Player
 
 #### get(username)
@@ -39,12 +44,25 @@ Retrieve a player data for a given `username`.
 Returns JSON from the API.
 
 ```javascript
-const QuakeChampionsClient = require('quake-champions-api');
-
 const client = new QuakeChampionsClient();
 
 async function getPlayer() {
-    const player = await client.player.get('lovethebomb');
+    const player = await client.player.get('my-username');
+}
+```
+
+### Match
+
+#### get(matchId)
+
+Retrieve a match data for a given `matchId`.
+Returns JSON from the API.
+
+```javascript
+const client = new QuakeChampionsClient();
+
+async function getMatch() {
+    const match = await client.match.get('match-id-1234abc');
 }
 ```
 
