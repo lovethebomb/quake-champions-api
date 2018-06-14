@@ -16,9 +16,11 @@ class QuakeChampionsClient {
         this.match = match.bind(this)();
     }
 
-    async request(url, options) {
+    async request(url) {
         const request = `${this._apiEndpoint}${url}`;
-        return fetch(request).catch(console.error)
+        return fetch(request).catch((e) => {
+            throw new Error(e);
+        });
     }
 
     toJson(res) {
