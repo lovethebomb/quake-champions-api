@@ -1,7 +1,7 @@
 {
   "name": "quake-champions-api",
   "version": "1.0.0",
-  "description": "Unofficial Quake Champions API client",
+  "description": "Unofficial Quake Champions API JavaScript client",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage"
