@@ -1,6 +1,7 @@
 const fetch = require('isomorphic-unfetch');
 
 const player = require('./lib/player');
+const match = require('./lib/match');
 
 const API_URL = "https://stats.quake.com/api/";
 const API_VERSION = "v2";
@@ -12,6 +13,7 @@ class QuakeChampionsClient {
         this._apiEndpoint = `${this._apiUrl}${this._apiVersion}`;
 
         this.player = player.bind(this)();
+        this.match = match.bind(this)();
     }
 
     async request(url, options) {
