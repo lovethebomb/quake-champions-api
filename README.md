@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.com/lovethebomb/quake-champions-api.svg?branch=master)](https://travis-ci.com/lovethebomb/quake-champions-api)
 
-
 This is an unofficial JS client for the [Quake Champions](quake-website) API, provided from [stats.quake.com][quake-stats] website.
 
 This project shouldn't be used in production as no official developer access has been provided to the Quake Champions API, thus it mainly map the calls seen from the [stats.quake.com][quake-stats] page, and the current API calls might not work in the future.
@@ -38,24 +37,28 @@ async function getData() {
 
 ### Player
 
-#### get(username)
+#### get(playername)
 
-Retrieve a player data for a given `username`.
+Retrieve a player data for a given `playername`.
+
 Returns JSON from the API.
 
 ```javascript
 const client = new QuakeChampionsClient();
 
 async function getPlayer() {
-    const player = await client.player.get('my-username');
+    const player = await client.player.get('my-playername');
 }
 ```
 
 ### Match
 
-#### get(matchId)
+#### get(matchId, playername)
 
 Retrieve a match data for a given `matchId`.
+
+Allows an optional `playername` argument, which adds more information to the response.
+
 Returns JSON from the API.
 
 ```javascript
@@ -63,6 +66,10 @@ const client = new QuakeChampionsClient();
 
 async function getMatch() {
     const match = await client.match.get('match-id-1234abc');
+}
+
+async function getMatchWithPlayerSummary() {
+    const match = await client.match.get('match-id-1234abc', 'my-playername');
 }
 ```
 
