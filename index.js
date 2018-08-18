@@ -3,6 +3,7 @@ const fetch = require('isomorphic-unfetch');
 const player = require('./lib/player');
 const match = require('./lib/match');
 const gamesSummary = require('./lib/gamesSummary');
+const leaderboard = require('./lib/leaderboard');
 
 const API_URL = "https://stats.quake.com/api/";
 const API_VERSION = "v2";
@@ -16,6 +17,7 @@ class QuakeChampionsClient {
         this.player = player.bind(this)();
         this.match = match.bind(this)();
         this.gamesSummary = gamesSummary.bind(this)();
+        this.leaderboard = leaderboard.bind(this)();
     }
 
     async request(url) {

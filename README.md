@@ -35,6 +35,7 @@ async function getData() {
 - [Player](#player)
 - [Match](#match)
 - [GamesSummary](#gamessummary)
+- [Leaderboard](#leaderboard)
 
 ### Player
 
@@ -87,6 +88,28 @@ const client = new QuakeChampionsClient();
 
 async function getGamesSummary() {
     const gamesSummary = await client.gamesSummary.get('my-playername');
+}
+```
+
+### Leaderboard
+
+#### get(board, season, from)
+
+Retrieve a Leaderboard data for a given `board` type.
+
+Board can be `duel` or `tdm`.
+
+Allows an optional `season` argument, which defaults to `current`.
+
+Allows an optional `from` argument, for pagination, which defaults to `0`.
+
+Returns JSON from the API.
+
+```javascript
+const client = new QuakeChampionsClient();
+
+async function getDuelLeaderboard() {
+    const leaderboard = await client.leaderboard.get('duel');
 }
 ```
 
