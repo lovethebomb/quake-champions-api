@@ -34,6 +34,7 @@ async function getData() {
 
 - [Player](#player)
 - [Match](#match)
+- [GamesSummary](#gamessummary)
 
 ### Player
 
@@ -70,6 +71,22 @@ async function getMatch() {
 
 async function getMatchWithPlayerSummary() {
     const match = await client.match.get('match-id-1234abc', 'my-playername');
+}
+```
+
+### GamesSummary
+
+#### get(playername)
+
+Retrieve a GamesSummary data for a given `playername`.
+
+Returns JSON from the API.
+
+```javascript
+const client = new QuakeChampionsClient();
+
+async function getGamesSummary() {
+    const gamesSummary = await client.gamesSummary.get('my-playername');
 }
 ```
 
