@@ -36,6 +36,7 @@ async function getData() {
 - [Match](#match)
 - [GamesSummary](#gamessummary)
 - [Leaderboard](#leaderboard)
+- [Rankings](#rankings)
 
 ### Player
 
@@ -110,6 +111,21 @@ const client = new QuakeChampionsClient();
 
 async function getDuelLeaderboard() {
     const leaderboard = await client.leaderboard.get('duel');
+}
+```
+
+### Rankings
+
+#### ranking(rating)
+
+Returns a ranking for a given `rating`, as a string like `GOLD_1`.
+
+```javascript
+const client = new QuakeChampionsClient();
+
+async function getPlayer() {
+    const player = await client.player.get('my-playername');
+    const ranking = client.rankings.ranking(player.playerRatings.duel.rating);
 }
 ```
 

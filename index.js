@@ -1,5 +1,6 @@
 const fetch = require('isomorphic-unfetch');
 
+const rankings = require('./lib/rankings');
 const player = require('./lib/player');
 const match = require('./lib/match');
 const gamesSummary = require('./lib/gamesSummary');
@@ -13,6 +14,8 @@ class QuakeChampionsClient {
         this._apiUrl = apiUrl || API_URL;
         this._apiVersion = apiVersion || API_VERSION;
         this._apiEndpoint = `${this._apiUrl}${this._apiVersion}`;
+
+        this.rankings = rankings;
 
         this.player = player.bind(this)();
         this.match = match.bind(this)();
