@@ -4,29 +4,17 @@ describe('Client/GamesSummary', () => {
     const client = new QuakeChampionsClient();
     const TEST_MATCH_PLAYERNAME = "lovethebomb";
     const TEST_GAMESSUMMARY = {
-        "id": "7258a90b-a28f-11e8-bce6-0003ffb6be63",
-        "time": "2018-08-18T02:36:01.7236235Z",
-        "mapName": "fortress_of_the_deep",
-        "rank": 2,
-        "score": null,
-        "gameMode": "FFA",
-        "won": true,
-        "xp": 2639,
-        "kdr": 1.6666666666666667,
-        "totalDamage": 5680,
-        "weaponAccuracy": {
-            "GAUNTLET": 0,
-            "MACHINEGUN": 23.976608187134502,
-            "MACHINEGUN_GRADE1": 34.66666666666667,
-            "SHOTGUN": 0,
-            "SHOTGUN_GRADE1": 75,
-            "NAILGUN": 0,
-            "NAILGUN_GRADE1": 0,
-            "ROCKET_LAUNCHER": 43.82022471910113,
-            "LIGHTNING_GUN": 39.726027397260275,
-            "RAILGUN": 58.333333333333336,
-            "LAGBOLT": 0
-        }
+        "id": expect.any(String),
+        "time": expect.any(String),
+        "mapName": expect.any(String),
+        "rank": expect.any(Number),
+        "score": expect.anything(),
+        "gameMode": expect.any(String),
+        "won": expect.any(Boolean),
+        "xp": expect.any(Number),
+        "kdr": expect.any(Number),
+        "totalDamage": expect.any(Number),
+        "weaponAccuracy": expect.any(Object)
     };
 
     test('should throw if missing playername', async () => {
