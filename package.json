@@ -27,11 +27,11 @@
   "author": "lovethebomb",
   "license": "MIT",
   "dependencies": {
-    "isomorphic-unfetch": "^2.1.1"
+    "isomorphic-unfetch": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "jest": "^23.6.0"
+    "eslint": "^5.13.0",
+    "jest": "^24.1.0"
   },
   "jest": {
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js?)$",

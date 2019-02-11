@@ -1,6 +1,6 @@
 # quake-champions-api
 
-[![Build Status](https://travis-ci.com/lovethebomb/quake-champions-api.svg?branch=master)](https://travis-ci.com/lovethebomb/quake-champions-api)
+[![Build Status](https://travis-ci.com/lovethebomb/quake-champions-api.svg?branch=master)](https://travis-ci.com/lovethebomb/quake-champions-api) [![Greenkeeper badge](https://badges.greenkeeper.io/lovethebomb/quake-champions-api.svg)](https://greenkeeper.io/)
 
 This is an unofficial JS client for the [Quake Champions](quake-website) API, provided from [stats.quake.com][quake-stats] website.
 
