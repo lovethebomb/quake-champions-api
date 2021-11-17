@@ -6,7 +6,7 @@ const match = require('./lib/match');
 const gamesSummary = require('./lib/gamesSummary');
 const leaderboard = require('./lib/leaderboard');
 
-const API_URL = "https://stats.quake.com/api/";
+const API_URL = "https://quake-stats.bethesda.net/api/";
 const API_VERSION = "v2";
 
 class QuakeChampionsClient {
