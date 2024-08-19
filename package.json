@@ -1,6 +1,6 @@
 {
   "name": "quake-champions-api",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Unofficial Quake Champions API JavaScript client",
   "main": "index.js",
   "scripts": {
